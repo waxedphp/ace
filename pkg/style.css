@@ -1,0 +1,21 @@
+
+.ace_editor .ace_gutter span[role=button] {
+  /*display:none!important;*/
+  padding: 0px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+  /*color: var(--pico-color);*/
+  /*font-weight: var(--pico-font-weight);*/
+  font-size: 1rem;
+  /*line-height: var(--pico-line-height);*/
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: none;
+}

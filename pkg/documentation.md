@@ -5,44 +5,67 @@ It matches the features and performance of native editors such as Sublime, Vim a
 It can be easily embedded in any web page and JavaScript application.
 Ace is maintained as the primary editor for Cloud9 IDE and is the successor of the Mozilla Skywriter (Bespin) project.
 
-BSD license
+https://ace.c9.io/
 
+Other license
 
-### HTML:
+---
+
+### PHP:
+
+```php
+  use Waxedphp\Ace\Setter as Ace;
+  
+  $obj = new Ace($this->waxed);
+  
+  $obj->setMode('pascal');
+  $obj->setTheme('dracula');
+
+  $this->waxed->pick('section1')->display([
+    'data' => [
+      'payload' => $obj->value("program Test;\nuses MyLib;\nbegin\n  writeln('Hello world.');\nend.\n"),
+  ]],$this->tpl.'/ace');
 
 ```
 
+---
+### HTML:
+
+```html
+
 <textarea class="waxed-ace"
-  name="code1"
+  name="code"
   style="height:200px;"
-  data-name="payload" >
+  data-name="data.payload" >
 
 </textarea>
 
 ```
+---
+---
 
-### PHP:
+### PHP methods:
+
+```php
+
+  use Waxedphp\Ace\Setter as Ace;
+  
+  $obj = new Ace($this->waxed);
+  
+  // sets the language
+  $obj->setMode('pascal');
+  
+  // sets the theme
+  $obj->setTheme('dracula');
+
+  // sets the content of editor and returns settings to frontend
+  $obj->value("program Test;\nuses MyLib;\nbegin\n  writeln('Hello world.');\nend.\n");
 
 ```
 
-$this->waxed->display([
-  'payload' =>
-    [
-      'value' => 'program Test;
-      uses MyLib;
-      begin
-        writeln(\'Hello world.\')
-      end.
-      ',
-      'mode' => 'ace/mode/pascal',
-      'theme' => 'ace/theme/tomorrow',
-    ],
-], 'template');
-
-```
 
 
-### Copyright:
+### License:
 
 ```
 Copyright (c) 2010, Ajax.org B.V.

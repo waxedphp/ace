@@ -9,3 +9,5 @@ ace.define('ace/ext/searchbox', null, extSearch);
 ace.config.set("basePath", "/assets/ace/");
 
 import "./plugin.js";
+
+import "./style.css";

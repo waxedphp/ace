@@ -1,3 +1,4 @@
 #!/bin/bash
 
-npm i ace-code
+npm install ace-code
+npm install ace-builds

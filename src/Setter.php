@@ -1,7 +1,7 @@
 <?php
 namespace Waxedphp\Ace;
 
-class Setter extends \Waxedphp\Waxedphp\Setters\AbstractSetter {
+class Setter extends \Waxedphp\Waxedphp\Php\Setters\AbstractSetter {
 
   /**
    * @var array<mixed> $setup
@@ -26,7 +26,7 @@ class Setter extends \Waxedphp\Waxedphp\Setters\AbstractSetter {
     return $this;
   }
 
-  public function value(mixed $value): array {
+  public function value(mixed $value = null): array {
     $a = $this->setup;
     $a['value'] = $value;
     return $a;
